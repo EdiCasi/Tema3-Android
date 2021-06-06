@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.fragment.app.ListFragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tema31.data.Book
 import kotlinx.android.synthetic.main.item_cell.view.*
@@ -31,6 +32,10 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.itemView.titleView.text=currentItem.title
         holder.itemView.authorView.text=currentItem.author
         holder.itemView.descriptionView.text=currentItem.description
+
+        holder.itemView.list_item.setOnClickListener {
+            
+        }
     }
 
     fun setData(book: List<Book>)

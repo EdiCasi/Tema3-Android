@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:background="@color/blue"
     android:padding="24sp"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:id="@+id/list_item">
 
     <TextView
         android:id="@+id/titleView"
