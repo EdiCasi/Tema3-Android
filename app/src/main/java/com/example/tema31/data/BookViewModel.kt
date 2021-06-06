@@ -9,8 +9,8 @@ import kotlinx.coroutines.launch
 
 class BookViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val readAllData: LiveData<List<Book>>
-private val repository: BookRepository
+    val readAllData: LiveData<List<Book>>
+    private val repository: BookRepository
 
     init {
         val bookDAO = BookDatabase.getDatabase(application).bookDao()
@@ -18,8 +18,7 @@ private val repository: BookRepository
         readAllData = repository.readAllData
     }
 
-    fun addBook(book : Book)
-    {
+    fun addBook(book: Book) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.addBook(book)
         }
